@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show List</title>
+</head>
+<body>
+    <h1>List of Shows</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Show ID</th>
+                <th>Show Name</th>
+                <th>Tags</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for Show in shows %}
+            <tr>
+                <td>{{ Show.showid }}</td>
+                <td>{{ Show.showname }}</td>
+                <td>{{ Show.tags }}</td>
+                <td>{{ Show.rating }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

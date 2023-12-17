@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Book Ticket</title>
+  </head>
+  <body>
+    <h1>Book Ticket</h1>
+    <form method="POST" action="/booktickets/{{showid}}">
+      <label for="numberoftickets">Number of tickets:</label>
+      <input type="number" name="numberoftickets" id="numberoftickets" required>
+      <label for="bookingdate">Date of booking in dd/mm/yyyy format:</label>
+      <input type="text" name="bookingdate" id="bookingdate" required>
+      <h2>Select Venue</h2>
+      <h3>List of available venues and their capacity:</h3><br>
+        {%for ven in ven%}
+        <a href ""></a>{{ven.venuename}}</a> {{ven.capacity}}
+    {%endfor%}<br><br><br>
+    <label for="nameofvenue">Please enter the name of venue:</label>
+      <input type="text" name="nameofvenue" id="nameofvenue" required>
+      <button type="submit" class="btn btn-primary">Book Tickets</button>
+  </form>
+    
+  </body>
+</html>

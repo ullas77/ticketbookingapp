@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>venue List</title>
+</head>
+<body>
+    <h1>List of venues</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>venue ID</th>
+                <th>venue Name</th>
+                <th>venue capacity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for Venue in venues %}
+            <tr>
+                <td>{{ Venue.venueid }}</td>
+                <td>{{ Venue.venuename }}</td>
+                <td>{{ Venue.capacity }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<table>
+    <thead>
+      <tr>
+        <th>ShowName </th>
+        <th> Tags </th>
+        <th> Rating </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for show in ratings %}
+        <tr>
+          <td> {{ show.showname }} </td>
+          <td> {{ show.tags }} </td>
+          <td> {{ show.rating }} </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>

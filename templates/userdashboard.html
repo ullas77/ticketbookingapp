@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      color: #333;
+      padding: 20px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+    }
+    h3 {
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <h2>User bookings</h2>
+  {% for boo in boo %}
+    <p>
+      <h3>Show ID:</h3>{{ boo.showid }} 
+      <h3>Venue Name:</h3>{{ boo.nameofvenue }} 
+      <h3>No. of Tickets:</h3>{{ boo.numberoftickets }}
+    </p>
+  {% endfor %}
+</body>
+</html>

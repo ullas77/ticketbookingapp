@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 100px;
+    }
+
+    h1 {
+      color: #5cb85c;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 18px;
+      color: #333;
+      display: block;
+      margin-top: 20px;
+    }
+
+    input[type="text"] {
+      width: 300px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background-color: #5cb85c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #449d44;
+    }
+  </style>
+</head>
+<body>
+  <h1>Edit Venue</h1>
+  <form method="post" action="/editvenue/{{venue}}">
+
+    <label for="venuename">Please enter new Venue Name</label>
+    <input type="text" id="newvname" name="newvname" required>
+    
+    <input type="submit" value="Update" onclick="return confirm('Are you sure?')">
+
+  </form>
+</body>
+</html>

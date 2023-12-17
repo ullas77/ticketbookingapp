@@ -1,0 +1,45 @@
+<<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Shows and Venues</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h2 class="text-center mt-4">Search Shows and Venues</h2>
+    <form action="/searchresults" method="POST" class="mt-3">
+      <div class="row">
+        <div class="col-md-4">
+          <label for="searchby">Search By:</label>
+          <select name="searchby" class="form-control">
+            <option value="showname">Show Name</option>
+            <option value="venuename">Venue Name</option>
+            <option value="location">Location</option>
+            <option value="tags">Tags</option>
+            <option value="rating">Rating</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="searchterm">Search Term:</label>
+          <input type="text" name="searchterm" class="form-control" required>
+        </div>
+        <div class="col-md-4 d-flex align-items-end">
+          <button type="submit" class="btn btn-primary mt-2">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <form action="/list_shows" method="POST">
+        <button type="submit" class="btn btn-success btn-block">List of Shows</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <form action="/list_venues" method="POST">
+        <button type="submit" class="btn btn-info btn-block">List of Venues</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

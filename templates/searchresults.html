@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Results</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h2>Shows</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Rating</th>
+        <th>Tags</th>
+        <th>Ticket Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for show in results %}
+      <tr>
+        <td>{{ show.showid }}</td>
+        <td>{{ show.showname }}</td>
+        <td>{{ show.rating }}</td>
+        <td>{{ show.tags }}</td>
+        <td>{{ show.ticketprice }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>Venues</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Place</th>
+        <th>Capacity</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for venue in venues %}
+      <tr>
+        <td>{{ venue.venueid }}</td>
+        <td>{{ venue.venuename }}</td>
+        <td>{{ venue.place }}</td>
+        <td>{{ venue.capacity }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
